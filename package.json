@@ -1,0 +1,32 @@
+{
+  "name": "@zouloux/signal",
+  "version": "1.0.0",
+  "description": "Thin and simple functional event system with strong typing. Inspired from Robert Penner's AS3 Signals.",
+  "main": "src/signal.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zouloux/signal.git"
+  },
+  "author": "Alexis Bouhet (ZoulouX)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zouloux/signal/issues"
+  },
+  "homepage": "https://github.com/zouloux/signal#readme",
+  "keywords": [
+    "signal",
+    "event",
+    "system",
+    "functional",
+    "strong",
+    "typing",
+    "typescript",
+    "as3"
+  ],
+  "devDependencies": {
+    "microbundle": "^0.15.0"
+  }
+}
