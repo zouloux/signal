@@ -14,7 +14,7 @@ export type TSignalHandler <GHP extends any[], GHR = void|any> = ( ...rest:GHP) 
 export interface ISignal <GHP extends any[] = any[], GHR = void|any>
 {
 	add: ( handler:TSignalHandler<GHP, GHR>, callAtInit?:boolean|GHP ) => () => void
-	once: ( handler:TSignalHandler<GHP, GHR>, callAtInit?:boolean|GHP ) => () => void
+	once: ( handler:TSignalHandler<GHP, GHR> ) => () => void
 	remove: ( handler:TSignalHandler<GHP, GHR> ) => void
 	dispatch: ( ...rest:GHP ) => GHR[]
 	clear: () => void
@@ -51,8 +51,8 @@ export function Signal
 			return add( handler, false, callAtInit )
 		},
 		// Add once and return a remove thunk
-		once ( handler:TSignalHandler<GHP, GHR>, callAtInit:boolean|GHP = false ) {
-			return add( handler, true, callAtInit )
+		once ( handler:TSignalHandler<GHP, GHR> ) {
+			return add( handler, true )
 		},
 		remove,
 		dispatch: ( ...rest ) => _listeners.map( listener => {
