@@ -15,6 +15,8 @@ Thin and simple functional event system with strong typing. Inspired from [Rober
 	<a href="#state-signal">State Signal</a>&nbsp;/&nbsp;
 	<a href="#observable">Observable</a>&nbsp;/&nbsp;
 </p>
+
+---
 <p align="center">
 	<strong>Observable</strong> ➡
 	<a href="#going-further-with-observable">Going further with observable</a>&nbsp;/&nbsp;
@@ -48,6 +50,7 @@ onMessage.dispatch({
 
 Signal follow the [__composition over inheritance__](https://en.wikipedia.org/wiki/Composition_over_inheritance) concept of design patterns
 to allow highly scalable projects and libraries. Ne need to extend EventDispatcher again.
+Simple example of composition with several Signals :
 
 ```typescript
 function createMessageSystem () { // No class, no inheritence, no pain
@@ -80,7 +83,7 @@ messageSystem.sendMessage("Bernie", "What'up ?")
 
 ```
 
-### Naming Signal
+### Naming Signals
 
 Signal are object entities which can and should be named correctly.
 It's better to name signal prefixed with __"on"__ and with usage of preterit if possible.
@@ -141,7 +144,7 @@ function ReactComponent ( props ) {
 }
 ```
 
-To clear all listeners. Useful to dispose a signal (can be garbage collected) :
+To clear all listeners. Useful to dispose a signal and allow garbage collection.
 
 ```tsx
 onSignal.clear();
@@ -154,19 +157,20 @@ StateSignal is a kind of Signal which holds the last dispatched value.
 A StateSignal can be initialized with a default value.
 
 ```tsx
+// No need for generics here, state type is gathered from default value
 const onStateSignal = StateSignal( 12 ) // 12 is the default value here
+console.log(onStateSignal.state) // == 12
 
 onStateSignal.add( value => {
 	// Is dispatched twice.
-	// 1st -> 12
-	// 2nd -> 15
 	console.log( value )
-}, true) // True here means call at init (will call handler when attached)
+	// 1st -> 12 (call at init)
+	// 2nd -> 15 (dispatch)
+}, true) // True here means "call at init" (will call handler when attached)
 
-// Can read state without having to add
+// Read and alter state
 if ( onStateSignal.state === 12 )
 	onStateSignal.dispatch( 15 ) // Change the state value
-
 ```
 
 
