@@ -1,6 +1,0 @@
-
-# Observable
-
-
-### TODO DOC
-

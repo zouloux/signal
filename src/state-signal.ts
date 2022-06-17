@@ -31,5 +31,10 @@ export function StateSignal
 			_state = state;
 			return _signal.dispatch( state )
 		},
+		// Remove listeners and stored state
+		clear () {
+			_signal.clear();
+			_state = null;
+		}
 	}
 }

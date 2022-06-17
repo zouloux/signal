@@ -1,7 +1,20 @@
 
 # Signal
 
+[//]: # (TODO : Image)
+
 Thin and simple functional event system with strong typing. Inspired from Robert Penner's AS3 Signals.
+
+---
+<p align="center">
+	<a href="#concept">Concept</a>&nbsp;/&nbsp;
+	<a href="#usage">Usage</a>&nbsp;/&nbsp;
+	<a href="#naming-signals">Naming Signals</a>&nbsp;/&nbsp;
+	<a href="#remove">Remove</a>&nbsp;/&nbsp;
+	<a href="#state-signal">State Signal</a>&nbsp;/&nbsp;
+	<a href="#observable">Observable</a>&nbsp;/&nbsp;
+</p>
+---
 
 ### Concept
 
@@ -61,9 +74,10 @@ messageSystem.sendMessage("Bernie", "What'up ?")
 
 ```
 
-### Naming things
+### Naming Signal
 
-It's better to name signal prefixed with "on" and with usage of preterit if possible.
+Signal are object entities which can and should be named correctly.
+It's better to name signal prefixed with __"on"__ and with usage of preterit if possible.
 
 ```
 ✅ onMessage
@@ -130,7 +144,7 @@ onSignal.clear();
 
 # State Signal
 
-StateSignal is a Signal addon which holds the last dispatched value.
+StateSignal is a kind of Signal which holds the last dispatched value.
 A StateSignal can be initialized with a default value.
 
 ```tsx
@@ -150,57 +164,9 @@ if ( onStateSignal.state === 12 )
 ```
 
 
-[//]: # (```tsx)
+# Observable
 
-[//]: # (// A class or object which compose a Signal)
+Going further with observable
 
-[//]: # (class MyModel {)
+[//]: # (TODO OBSERVABLE DOC)
 
-[//]: # (	// State type is boolean, generics is optionnal here because state is initialized in constructor)
-
-[//]: # (	onReady = StateSignal<[boolean]>&#40; false &#41;)
-
-[//]: # (    public data)
-
-[//]: # (    // A method which will dispatch the signal and change the state )
-
-[//]: # (    async load &#40;&#41; {)
-
-[//]: # (        this.data = await fetchData&#40;&#41;; // ...)
-
-[//]: # (		this.onReady.dispatch&#40; true &#41;)
-
-[//]: # (    })
-
-[//]: # (})
-
-[//]: # (// Somewhere else :)
-
-[//]: # (const modelInstance = new MyModel&#40;&#41;;)
-
-[//]: # (function dataIsReady &#40;&#41; {)
-
-[//]: # (	// Will be called when model is ready)
-
-[//]: # (	// Will be called once)
-
-[//]: # (	// Will be called directly when attached if model is already ready)
-
-[//]: # (})
-
-[//]: # (modelInstance.onReady.state ? dataIsReady : modelInstance.onReady.add&#40; &#41;)
-
-[//]: # (const listener = modelInstance.onReady.add&#40; isReady => {)
-
-[//]: # (	if &#40; isReady &#41; {)
-
-[//]: # (	    )
-[//]: # (        console.log&#40; modelInstance.data &#41;)
-
-[//]: # (        listener&#40;&#41;;)
-
-[//]: # (    })
-
-[//]: # (}&#41;)
-
-[//]: # (```)
