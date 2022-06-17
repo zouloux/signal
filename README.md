@@ -3,10 +3,11 @@
 
 [//]: # (TODO : Image)
 
-Thin and simple functional event system with strong typing. Inspired from Robert Penner's AS3 Signals.
+Thin and simple functional event system with strong typing. Inspired from [Robert Penner](https://github.com/robertpenner)'s AS3 Signals.
 
 ---
 <p align="center">
+	<strong>Signal</strong> ➡
 	<a href="#concept">Concept</a>&nbsp;/&nbsp;
 	<a href="#usage">Usage</a>&nbsp;/&nbsp;
 	<a href="#naming-signals">Naming Signals</a>&nbsp;/&nbsp;
@@ -14,6 +15,11 @@ Thin and simple functional event system with strong typing. Inspired from Robert
 	<a href="#state-signal">State Signal</a>&nbsp;/&nbsp;
 	<a href="#observable">Observable</a>&nbsp;/&nbsp;
 </p>
+<p align="center">
+	<strong>Observable</strong> ➡
+	<a href="#going-further-with-observable">Going further with observable</a>&nbsp;/&nbsp;
+</p>
+
 ---
 
 ### Concept
