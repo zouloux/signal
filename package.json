@@ -1,6 +1,6 @@
 {
   "name": "@zouloux/signal",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Thin and simple functional event system with strong typing. Inspired from Robert Penner's AS3 Signals.",
   "type": "module",
   "main" : "./dist/index.es2017.cjs",
