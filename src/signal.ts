@@ -65,3 +65,5 @@ export function Signal
 		get listeners () { return _listeners.map( l => l[0] ) }
 	}
 }
+
+export default Signal
