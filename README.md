@@ -4,7 +4,7 @@
 [//]: # (TODO : Image)
 
 Thin and simple functional event system with strong typing.
-Signal size is __less than 300b__ with __no external dependencies__.
+Signal size is __![](./bits/signal.es2017.in.js.svg)__ with __no external dependencies__.
 <br>Inspired from [Robert Penner](https://github.com/robertpenner)'s AS3 Signals.
 <br>Source code in Typescript, compiled to ESM & CJS Javascript thanks to [TSBundle](https://github.com/zouloux/tsbundle).
 Works in Node and Browser environments.

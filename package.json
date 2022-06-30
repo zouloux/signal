@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "@types/node": "^18.0.0",
-    "@zouloux/tsbundle": "^1.1.7"
+    "@zouloux/tsbundle": "^1.2.0"
   },
   "tsbundle": {
     "output": "./dist",
@@ -34,7 +34,8 @@
       {
         "input" :  "./src/signal.ts",
         "formats" : [ "es2017.min.js" ],
-        "libraryName" : "Signal"
+        "libraryName" : "Signal",
+        "exportBits" : true
       },
       {
         "input" :  "./src/state-signal.ts",
