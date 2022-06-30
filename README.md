@@ -21,6 +21,7 @@ Works in Node and Browser environments.
 	<strong>Going further</strong> ➡
 	<a href="#state-signal">State Signal</a>&nbsp;/&nbsp;
 	<a href="#observable">Observable</a>
+	<a href="#unpkg">Unpkg</a>
 </p>
 
 ---
@@ -152,7 +153,7 @@ onSignal.clear();
 ```
 
 
-# State Signal
+## State Signal
 
 StateSignal is a kind of Signal which holds the last dispatched value.
 A StateSignal can be initialized with a default value.
@@ -175,9 +176,16 @@ if ( onStateSignal.state === 12 )
 ```
 
 
-# Observable
+## Observable
 
 Going further with observable
 
 [//]: # (TODO OBSERVABLE DOC)
 
+## Unpkg
+
+Signal is available on [unpkg](https://unpkg.com/) CDN as :
+- Only Signal : https://unpkg.com/@zouloux/signal@latest/dist/signal.es2017.min.js
+- State-Signal + Signal : https://unpkg.com/@zouloux/signal@latest/dist/state-signal.es2017.min.js
+- Observable + Signal : https://unpkg.com/@zouloux/signal@latest/dist/observable.es2017.min.js
+- Signal + State-Signal + Observable : https://unpkg.com/@zouloux/signal@latest/dist/index.es2017.min.js
