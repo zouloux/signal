@@ -20,6 +20,7 @@
   "tsbundle": {
     "output": "./dist",
     "generateTypeDefinitions" : false,
+    "exportBits" : true,
     "exportMap" : {
       "Signal" : "./signal",
       "StateSignal" : "./state-signal",
@@ -29,14 +30,12 @@
       {
         "input" : "./src/index.ts",
         "formats": [ "es2017.cjs", "es2020.mjs", "es2017.min.js" ],
-        "generateTypeDefinitions" : true,
-        "exportBits" : true
+        "generateTypeDefinitions" : true
       },
       {
         "input" :  "./src/signal.ts",
         "formats" : [ "es2017.min.js" ],
-        "libraryName" : "Signal",
-        "exportBits" : true
+        "libraryName" : "Signal"
       },
       {
         "input" :  "./src/state-signal.ts",

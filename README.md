@@ -185,7 +185,7 @@ Going further with observable
 ## Unpkg
 
 Signal is available on [unpkg](https://unpkg.com/) CDN as :
-- Only Signal : https://unpkg.com/@zouloux/signal@latest/dist/signal.es2017.min.js ![](./bits/signal.es2017.min.js.svg)
-- State-Signal + Signal : https://unpkg.com/@zouloux/signal@latest/dist/state-signal.es2017.min.js
-- Observable + Signal : https://unpkg.com/@zouloux/signal@latest/dist/observable.es2017.min.js
-- Signal + State-Signal + Observable : https://unpkg.com/@zouloux/signal@latest/dist/index.es2017.min.js ![](./bits/index.es2017.min.js.svg)
+- [Only Signal](https://unpkg.com/@zouloux/signal@latest/dist/signal.es2017.min.js) ![](./bits/signal.es2017.min.js.svg)
+- [State-Signal + Signal.js](https://unpkg.com/@zouloux/signal@latest/dist/state-signal.es2017.min) ![](./bits/state-signal.es2017.min.js.svg) 
+- [Observable + Signal](https://unpkg.com/@zouloux/signal@latest/dist/observable.es2017.min.js)  ![](./bits/observable.es2017.min.js.svg)
+- [Signal + State-Signal + Observable](https://unpkg.com/@zouloux/signal@latest/dist/index.es2017.min.js) ![](./bits/index.es2017.min.js.svg)
