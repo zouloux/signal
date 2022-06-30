@@ -4,7 +4,7 @@
 [//]: # (TODO : Image)
 
 Thin and simple functional event system with strong typing.
-Signal size is __![](./bits/signal.es2017.min.js.svg)__ with __no external dependencies__.
+Signal size is __![less than 300b](./bits/signal.es2017.min.js.svg)__ with __no external dependencies__.
 <br>Inspired from [Robert Penner](https://github.com/robertpenner)'s AS3 Signals.
 <br>Source code in Typescript, compiled to ESM & CJS Javascript thanks to [TSBundle](https://github.com/zouloux/tsbundle).
 Works in Node and Browser environments.
@@ -185,7 +185,7 @@ Going further with observable
 ## Unpkg
 
 Signal is available on [unpkg](https://unpkg.com/) CDN as :
-- Only Signal : https://unpkg.com/@zouloux/signal@latest/dist/signal.es2017.min.js
+- Only Signal : https://unpkg.com/@zouloux/signal@latest/dist/signal.es2017.min.js ![](./bits/signal.es2017.min.js.svg)
 - State-Signal + Signal : https://unpkg.com/@zouloux/signal@latest/dist/state-signal.es2017.min.js
 - Observable + Signal : https://unpkg.com/@zouloux/signal@latest/dist/observable.es2017.min.js
-- Signal + State-Signal + Observable : https://unpkg.com/@zouloux/signal@latest/dist/index.es2017.min.js
+- Signal + State-Signal + Observable : https://unpkg.com/@zouloux/signal@latest/dist/index.es2017.min.js ![](./bits/index.es2017.min.js.svg)

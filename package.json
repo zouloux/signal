@@ -29,7 +29,8 @@
       {
         "input" : "./src/index.ts",
         "formats": [ "es2017.cjs", "es2020.mjs", "es2017.min.js" ],
-        "generateTypeDefinitions" : true
+        "generateTypeDefinitions" : true,
+        "exportBits" : true
       },
       {
         "input" :  "./src/signal.ts",
