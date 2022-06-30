@@ -3,7 +3,11 @@
 
 [//]: # (TODO : Image)
 
-Thin and simple functional event system with strong typing. Inspired from [Robert Penner](https://github.com/robertpenner)'s AS3 Signals.
+Thin and simple functional event system with strong typing.
+Signal size is __less than 300b__ with __no external dependencies__.
+<br>Inspired from [Robert Penner](https://github.com/robertpenner)'s AS3 Signals.
+<br>Source code in Typescript, compiled to ESM & CJS Javascript thanks to [TSBundle](https://github.com/zouloux/tsbundle).
+Works in Node and Browser environments.
 
 ---
 <p align="center">
@@ -11,15 +15,12 @@ Thin and simple functional event system with strong typing. Inspired from [Rober
 	<a href="#concept">Concept</a>&nbsp;/&nbsp;
 	<a href="#usage">Usage</a>&nbsp;/&nbsp;
 	<a href="#naming-signals">Naming Signals</a>&nbsp;/&nbsp;
-	<a href="#remove">Remove</a>&nbsp;/&nbsp;
-	<a href="#state-signal">State Signal</a>&nbsp;/&nbsp;
-	<a href="#observable">Observable</a>&nbsp;/&nbsp;
+	<a href="#remove">Remove</a>
 </p>
-
----
 <p align="center">
-	<strong>Observable</strong> ➡
-	<a href="#going-further-with-observable">Going further with observable</a>&nbsp;/&nbsp;
+	<strong>Going further</strong> ➡
+	<a href="#state-signal">State Signal</a>&nbsp;/&nbsp;
+	<a href="#observable">Observable</a>
 </p>
 
 ---

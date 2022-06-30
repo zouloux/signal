@@ -1,10 +1,52 @@
 {
   "name": "@zouloux/signal",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Thin and simple functional event system with strong typing. Inspired from Robert Penner's AS3 Signals.",
-  "main": "src/signal.ts",
+  "type": "module",
+  "main" : "./dist/index.es2017.cjs",
+  "module" : "./dist/index.es2020.mjs",
+  "browser" : "./dist/index.es2017.min.js",
+  "unpkg" : "./dist/index.es2017.min.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "reset" : "rm -rf node_modules package-lock.json && npm i",
+    "build": "tsbundle build",
+    "clean": "tsbundle clean",
+    "test": "tsbundle test"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@zouloux/tsbundle": "^1.1.7"
+  },
+  "tsbundle": {
+    "output": "./dist",
+    "generateTypeDefinitions" : false,
+    "exportMap" : {
+      "Signal" : "./signal",
+      "StateSignal" : "./state-signal",
+      "Observable" : "./observable"
+    },
+    "files": [
+      {
+        "input" : "./src/index.ts",
+        "formats": [ "es2017.cjs", "es2020.mjs", "es2017.min.js" ],
+        "generateTypeDefinitions" : true
+      },
+      {
+        "input" :  "./src/signal.ts",
+        "formats" : [ "es2017.min.js" ],
+        "libraryName" : "Signal"
+      },
+      {
+        "input" :  "./src/state-signal.ts",
+        "formats" : [ "es2017.min.js" ],
+        "libraryName" : "StateSignal"
+      },
+      {
+        "input" :  "./src/observable.ts",
+        "formats" : [ "es2017.min.js" ],
+        "libraryName" : "Observable"
+      }
+    ]
   },
   "repository": {
     "type": "git",
@@ -24,9 +66,6 @@
     "strong",
     "typing",
     "typescript",
-    "as3"
-  ],
-  "devDependencies": {
-    "microbundle": "^0.15.0"
-  }
+    "javascript"
+  ]
 }
