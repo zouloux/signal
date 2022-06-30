@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "@types/node": "^18.0.0",
-    "@zouloux/tsbundle": "^1.2.0"
+    "@zouloux/tsbundle": "^1.2.1"
   },
   "tsbundle": {
     "output": "./dist",
