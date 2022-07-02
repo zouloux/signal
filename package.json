@@ -1,6 +1,6 @@
 {
   "name": "@zouloux/signal",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Thin and simple functional event system with strong typing. Inspired from Robert Penner's AS3 Signals.",
   "type": "module",
   "main": "./dist/index.es2017.cjs",
@@ -9,13 +9,14 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "reset": "rm -rf node_modules package-lock.json && npm i",
+    "test": "node tests/signal.test.cjs",
     "build": "tsbundle build",
     "clean": "tsbundle clean",
-    "test": "tsbundle test",
     "publish": "tsbundle publish"
   },
   "devDependencies": {
     "@types/node": "^18.0.0",
+    "@solid-js/cli": "^1.7.5",
     "@zouloux/tsbundle": "^1.2.7"
   },
   "tsbundle": {
