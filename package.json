@@ -1,14 +1,14 @@
 {
   "name": "@zouloux/signal",
-  "version": "0.1.11",
+  "version": "0.2.0",
   "description": "Thin and simple functional event system with strong typing. Inspired from Robert Penner's AS3 Signals.",
   "type": "module",
-  "main" : "./dist/index.es2017.cjs",
-  "module" : "./dist/index.es2020.mjs",
-  "unpkg" : "./dist/index.es2017.min.js",
-  "types" : "./dist/index.d.ts",
+  "main": "./dist/index.es2017.cjs",
+  "module": "./dist/index.es2020.mjs",
+  "unpkg": "./dist/index.es2017.min.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
-    "reset" : "rm -rf node_modules package-lock.json && npm i",
+    "reset": "rm -rf node_modules package-lock.json && npm i",
     "build": "tsbundle build",
     "clean": "tsbundle clean",
     "test": "tsbundle test",
@@ -20,21 +20,27 @@
   },
   "tsbundle": {
     "output": "./dist",
-    "generateTypeDefinitions" : false,
-    "exportBits" : true,
-    "exportMap" : {
-      "Signal" : "./signal",
-      "StateSignal" : "./state-signal"
+    "generateTypeDefinitions": false,
+    "exportBits": true,
+    "exportMap": {
+      "Signal": "./signal",
+      "StateSignal": "./state-signal"
     },
     "files": [
       {
-        "input" : "./src/index.ts",
-        "formats": [ "es2017.cjs", "es2020.mjs", "es2017.min.js" ],
-        "generateTypeDefinitions" : true
+        "input": "./src/index.ts",
+        "formats": [
+          "es2017.cjs",
+          "es2020.mjs",
+          "es2017.min.js"
+        ],
+        "generateTypeDefinitions": true
       },
       {
-        "input" :  "./src/signal.ts",
-        "formats" : [ "es2017.min.js" ]
+        "input": "./src/signal.ts",
+        "formats": [
+          "es2017.min.js"
+        ]
       }
     ]
   },
