@@ -5,4 +5,7 @@
 		"moduleResolution": "Node",
 		"lib": ["ESNext"]
 	},
+//	"include" : [
+//		"./dist/**/*"
+//	]
 }
