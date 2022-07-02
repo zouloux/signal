@@ -15,7 +15,7 @@ Works in Node and Browser environments.
 	<a href="#concept">Concept</a>&nbsp;/&nbsp;
 	<a href="#usage">Usage</a>&nbsp;/&nbsp;
 	<a href="#naming-signals">Naming Signals</a>&nbsp;/&nbsp;
-	<a href="#remove">Remove</a>
+	<a href="#remove">Remove</a>&nbsp;/&nbsp; 
 	<a href="#state-signal">State Signal</a>&nbsp;/&nbsp;
 	<a href="#unpkg">Unpkg</a>
 </p>
