@@ -127,7 +127,7 @@ removeListener() // dettach listener without handler ref
 onSignal.dispatch()
 ```
 
-Works well with react hooks :
+Works well with React Hooks :
 
 ```tsx
 function ReactComponent ( props ) {
@@ -139,6 +139,15 @@ function ReactComponent ( props ) {
 		})
 	}, [])
 	return <div></div>
+}
+```
+
+Can be shortened to 
+```tsx
+function ReactComponent ( props ) {
+	useLayoutEffect(() => Model.onData.add( data => {
+		// Data changed, listener will be removed automatically with component
+	}))
 }
 ```
 
@@ -169,6 +178,24 @@ onStateSignal.add( value => {
 // Read and alter state
 if ( onStateSignal.state === 12 )
 	onStateSignal.dispatch( 15 ) // Change the state value
+```
+
+State Signal will send old value as second argument. It can be useful to diff changes.
+
+```tsx
+const onStateSignal = StateSignal( 12 )
+onStateSignal.add( ( newValue, oldValue ) => {
+	// Continue only when value actually changes
+	if ( newValue == oldValue )
+		return
+	if ( newValue > oldValue )
+		console.log("Greater")
+	else
+		console.log("Smaller")
+})
+onStateSignal.dispatch( 15 ) // Greater
+onStateSignal.dispatch( 5 ) // Smaller
+onStateSignal.dispatch( 5 ) // No effect
 ```
 
 ### Unpkg
